@@ -1,0 +1,37 @@
+using Gtk 4.0;
+using Adw 1;
+
+template $MainWindow : Adw.ApplicationWindow {
+  title: _("BlueTest");
+  default-width: 420;
+  default-height: 240;
+
+  // Заголовок окна с системными кнопками
+  titlebar: Adw.HeaderBar {
+    title-widget: Adw.WindowTitle {
+      title: "BlueTest";
+      subtitle: "Hello, Libadwaita + Blueprint";
+    };
+  };
+
+  // Контент
+  content: Adw.Clamp {
+    maximum-size: 600;
+
+    child: Gtk.Box {
+      orientation: vertical;
+      spacing: 12;
+      margin-start: 24;
+      margin-end: 24;
+      margin-top: 24;
+      margin-bottom: 24;
+
+      Gtk.Label {
+        label: "Hello, Libadwaita + Blueprint!";
+        wrap: true;
+        halign: center;
+        css-classes: ["title-1"];
+      }
+    };
+  };
+}

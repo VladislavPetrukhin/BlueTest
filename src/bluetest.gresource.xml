@@ -1,0 +1,6 @@
+<gresources>
+  <gresource prefix="/org/gnome/Example">
+    <file>data/ui/compiled/main_window.ui</file>
+  </gresource>
+</gresources>
+
